@@ -17,6 +17,7 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{background:var(--paper);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.6;margin:0}
 a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
@@ -161,21 +162,24 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
 .req{color:var(--gold-d)}
 .formsec .fsub .req{color:var(--gold)}
 form{margin-top:30px;display:grid;gap:18px}
-fieldset{border:0;margin:0;background:var(--white);border-radius:14px;padding:26px 26px 22px;display:grid;gap:16px;min-width:0}
-legend{float:left;width:100%;display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink);margin-bottom:4px;padding:0}
+fieldset{border:0;margin:0;background:var(--white);border-radius:14px;padding:26px 26px 22px;display:block;min-width:0;width:100%}
+fieldset > * + *{margin-top:16px}
+fieldset > legend + *{margin-top:0}
+legend{float:left;width:100%;display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink);margin:0 0 18px;padding:0}
 legend + *{clear:both}
 legend span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--gold);font-family:var(--sans);font-size:15px;font-weight:700;flex:none}
 .hint{font-size:14px;color:var(--mut);margin-top:-6px}
 .field{display:grid;gap:6px;min-width:0}
 .field label,.glabel{font-weight:600;font-size:14.5px;color:var(--ink)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;font:16px var(--sans);color:var(--txt);background:var(--paper);border:1.5px solid var(--line);border-radius:9px;padding:12px 14px;transition:border-color .15s}
+input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;max-width:100%;-webkit-appearance:none;appearance:none;font:16px var(--sans);color:var(--txt);background:var(--paper);border:1.5px solid var(--line);border-radius:9px;padding:12px 14px;transition:border-color .15s}
 textarea{resize:vertical;min-height:84px}
+select{background-image:linear-gradient(45deg,transparent 50%,#56676B 50%),linear-gradient(135deg,#56676B 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);background:var(--white)}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
 .opts label{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:var(--paper);border-radius:30px;padding:8px 14px;font-size:14.5px;font-weight:500;color:var(--txt);cursor:pointer;user-select:none;transition:all .12s}
 .opts label:has(input:checked){background:var(--ink);border-color:var(--ink);color:var(--white)}
-.opts input{accent-color:var(--gold);margin:0;width:16px;height:16px}
+.opts input{accent-color:var(--gold);margin:0;width:16px;height:16px;flex:none}
 .opts label:focus-within{outline:2px solid var(--teal);outline-offset:2px}
 .other{margin-top:4px}
 .consent{display:grid;grid-template-columns:22px 1fr;gap:12px;font-size:14.5px;line-height:1.5;cursor:pointer;color:var(--txt)}
@@ -454,7 +458,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);ba
 <footer><div class="wrap"><span>Prêmio Melhores ONGs · Distrito Federal 2026 · Dúvidas: Phelipe Sales · (61) 98514-9406</span><span>12 de novembro de 2026 · Brasília/DF</span></div></footer>
 <script>
 /* ===== COLE AQUI o link do Apps Script (termina em /exec) ===== */
-const API_URL = "https://script.google.com/macros/s/AKfycbw84lUK9R66H8xerCeaRXzOPlX0A9v76D2_O6XGt_5XWn0lC9cY8Z1guthm-c9I9r9oLw/exec";
+const API_URL = "COLE_AQUI_O_LINK_EXEC";
 
 (function(){
   const $ = id => document.getElementById(id);
